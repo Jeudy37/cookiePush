@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CookiePush</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<div class="container-fluid ">
+    <div class="col vh-100"> <img src="./cookies.jpg" alt="" class="img-fluid"></div>
+   <!-- <h2> CookiePush</h2>-->
+</div>
+<div class="container-fluid w-100  ">
+    
+    <div class="row vh-100">
+        
+            <div class="row align-items-center justify-content-center mt-5">
+                <div class="col">
+                    <div class="text-center " style="padding-left: 540px;"><h3>CookiePush</h3> </div>
+                </div>
+                <div class="col">
+                    <img src="./kook.jpeg"  height="60" width="60" alt="">
+                </div>   
+            <div class="text-center"><h3>Push your Cookie now...</h3></div>
+            </div>
+        
+
+        <div class="col-6 " style="background-color: #c6aad6;">
+            <div class="container">
+                
+                
+                <button class="btn btn-light mt-5" onclick="showCookies()">
+                    Show all Cookies
+                </button>
+                <button class="btn btn-light mt-5 ms-md-5" style="margin-right: 150px;" onclick="clearOutputCookies()">Clear</button>
+                <div id="cookies">
+                </div>
+            </div>
+            <div class="container mt-3">  
+                <div class="row justify-content-between align-content-lg-start">
+                    <div class="col-md-6">
+                        <input type="text" id="research" class="form-control" id="cookie" placeholder="research a cookie">
+                    </div>
+                    <div class="col mt-3">
+                        <button onclick="research()" class="btn  btn-primary"   >search</button>
+                    </div>
+                    <div id="result">
+
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-3">  
+                <div class="row justify-content-between align-content-lg-start">
+                    <div class="col-md-6">
+                        <input type="text" id="delete" class="form-control" id="cookie" placeholder="delete a cookie">
+                    </div>
+                    <div class="col mt-3">
+                        <button onclick="deleteCookie()" class="btn  btn-primary"  >delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 p-5" style="background-color: #c6aad6;">
+            <div class="card px-1 py-4">
+            <div class="card-body">
+            <h6 class="information mt-4">Cookie</h6>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                <input class="form-control" id="name" type="text" id="name" placeholder="Name"> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="input-group"> <input id="value" class="form-control" id="valeur" type="text" placeholder="Value"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="input-group"> <input id="expires" class="form-control" id="expires" type="number" placeholder="Expires"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-4  align-items-start justify-content-between">
+            <div class=" col-md-3"><button id="register" class="btn btn-primary btn-block confirm-button" onclick="addCookie()">Add</button></div>
+            <div class="col-md-3"> <button name="update" class="btn btn-primary btn-block confirm-button" onclick="updateCookie()">Update</button></div>
+            </div>
+        </div>    
+        </div>
+    </div>
+    </div>
+</div>
+    <script type="text/javascript" src="cookiPush.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    /*body{background-color:#538e9c}*/
+    .card{width:400px;background-color:#fff;border:none;border-radius: 12px
+    }
+    label.radio{cursor: pointer;width: 100%}
+    label.radio input{position: absolute;top: 0;left: 0;visibility: hidden;pointer-events: none}
+    label.radio span{padding: 7px 14px;border: 2px solid #eee;display: inline-block;color: #039be5;border-radius: 10px;width: 100%;height: 48px;line-height: 27px}
+    label.radio input:checked+span{border-color: #039BE5;background-color: #81D4FA;color: #fff;border-radius: 9px;height: 48px;line-height: 27px}
+    .form-control{margin-top: 10px;height: 48px;border: 2px solid #eee;border-radius: 10px}
+    .form-control:focus{box-shadow: none;border: 2px solid #039BE5}
+    .agree-text{font-size: 12px}.terms{font-size: 12px;text-decoration: none;color: #039BE5}
+    .confirm-button{height: 50px;border-radius: 10px}
+</style>
